@@ -29,11 +29,11 @@
 
 ```json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "securepassword",
-  "confPassword": "securepassword",
-  "role": "user"
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "securepassword",
+    "confPassword": "securepassword",
+    "role": "user"
 }
 ```
 
@@ -45,8 +45,8 @@
 - **Body:**
 ```json
 {
-  "error": false,
-  "message": "User Created"
+    "error": false,
+    "message": "User Created"
 }
 ```
 
@@ -56,40 +56,40 @@
     - Invalid input or missing fields
         ```json
         {
-        "error": true,
-        "message": "All fields are required"
+            "error": true,
+            "message": "All fields are required"
         }
         ```
 
     - Invalid input email format
         ```json
         {
-        "error": true,
-        "message": "Invalid email format"
+            "error": true,
+            "message": "Invalid email format"
         }
         ```
 
     - Invalid input password format
         ```json
         {
-        "error": true,
-        "message": "Password must be at least 8 characters",
+            "error": true,
+            "message": "Password must be at least 8 characters"
         }
         ```
     
     - Email already registered
         ```json
         {
-        "error": true,
-        "message": "Email is already registered"
+            "error": true,
+            "message": "Email is already registered"
         }
         ```
 
     - Password and Confirm Password do not match
         ```json
         {
-        "error": true,
-        "message": "Password and Confirm Password do not match"
+            "error": true,
+            "message": "Password and Confirm Password do not match"
         }
         ```
 
@@ -97,9 +97,9 @@
     - Internal server error
         ```json
         {
-        "error": true,
-        "message": "Internal Server Error",
-        "errorMessage": "Details about the internal server error"
+            "error": true,
+            "message": "Internal Server Error",
+            "errorMessage": "Details about the internal server error"
         }
         ```
 
