@@ -51,7 +51,7 @@
 }
 ```
 
-?> accessToken are only valid for 1 minute.
+?> accessToken are only **valid** for **1 minute**.
 
 ### Error Responses
 
@@ -106,4 +106,4 @@
         }
         ```
 
-!> Any other HTTP method will result in a 405 Method Not Allowed response.
+!> Any other HTTP method will result in a **405 Method Not Allowed** response.
