@@ -2,3 +2,4 @@
     - [Register](/register)
     - [Login](/login)
     - [Users](/users)
+    - [Token](/token)
