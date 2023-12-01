@@ -32,7 +32,6 @@ Cookie: refreshToken=<refresh_token>
 ### Success Response
 
 - **Status Code:** `200 OK`
-- **Body:**
 ```json
 {
     "error": false,

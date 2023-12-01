@@ -32,9 +32,9 @@ Authorization: Bearer <accessToken>
 ### Success Response
 
 - **Status Code:** `200 OK`
-- **Body:**
 ```json
 {
+    "error": false,
     "users": [
         {
             "userId": 1,

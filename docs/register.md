@@ -42,7 +42,6 @@
 ### Success Response
 
 - **Status Code:** `201 Created`
-- **Body:**
 ```json
 {
     "error": false,
