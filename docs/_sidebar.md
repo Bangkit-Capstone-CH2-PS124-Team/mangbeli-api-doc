@@ -1,2 +1,3 @@
 - Endpoint
     - [Register](/register)
+    - [Login](/login)
