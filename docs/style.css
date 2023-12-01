@@ -1,0 +1,38 @@
+:root {
+    --heading-h2-border-color: #464c53;
+
+    .markdown-section code:not([class*=lang-]):not([class*=language-]) {
+        color: var(--theme-color);
+    }
+
+    --link-color: var(--theme-color);
+
+    .markdown-section table {
+        border-collapse: separate;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    }
+
+    .markdown-section th,
+    .markdown-section td {
+        border: 1px solid #464c53;
+        padding: 6px;
+        text-align: left;
+    }
+
+    .markdown-section th:first-child {
+        border-top-left-radius: 8px;
+    }
+
+    .markdown-section th:last-child {
+        border-top-right-radius: 8px;
+    }
+
+    .markdown-section tr:last-child td:first-child {
+        border-bottom-left-radius: 8px;
+    }
+
+    .markdown-section tr:last-child td:last-child {
+        border-bottom-right-radius: 8px;
+    }
+}
