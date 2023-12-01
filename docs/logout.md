@@ -1,4 +1,4 @@
-# API Documentation - User Logout
+# **API Documentation - User Logout**
 
 ## URL
 

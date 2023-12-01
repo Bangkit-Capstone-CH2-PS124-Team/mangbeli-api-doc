@@ -1,4 +1,4 @@
-# API Documentation Mang Beli
+# **API Documentation Mang Beli**
 
 <p align="center">
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
@@ -66,6 +66,6 @@ The table structure is as follows:
 
 - **[Token](/token)**
 
-- **[Logout](/logout):**
+- **[Logout](/logout)**
 
 Click on each endpoint to view detailed documentation.

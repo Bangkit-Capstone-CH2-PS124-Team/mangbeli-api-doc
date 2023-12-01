@@ -1,3 +1,4 @@
+- [Home](/)
 - Endpoints
     - [Register](/register)
     - [Login](/login)

@@ -1,4 +1,4 @@
-# API Documentation - Get Users
+# **API Documentation - Get Users**
 
 ## URL
 
