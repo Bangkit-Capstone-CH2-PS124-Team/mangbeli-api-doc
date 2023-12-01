@@ -3,3 +3,4 @@
     - [Login](/login)
     - [Users](/users)
     - [Token](/token)
+    - [Logout](/logout)
