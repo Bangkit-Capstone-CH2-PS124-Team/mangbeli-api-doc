@@ -58,7 +58,7 @@ Authorization: Bearer <accessToken>
         ```json
         {
             "error": true,
-            "message": "Unauthorized: Missing refresh token"
+            "message": "Unauthorized: Missing access token"
         }
         ```
 
