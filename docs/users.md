@@ -53,12 +53,12 @@ Authorization: Bearer <accessToken>
 
 ### Error Responses
 
-- **Status Code:** `403 Forbidden`
+- **Status Code:** `401 Unauthorized`
     - Missing or invalid access token
         ```json
         {
             "error": true,
-            "message": "Unauthorized: Missing or invalid access token"
+            "message": "Unauthorized: Missing refresh token"
         }
         ```
 

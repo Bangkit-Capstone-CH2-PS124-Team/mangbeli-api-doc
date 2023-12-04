@@ -71,6 +71,14 @@
         }
         ```
 
+    - Email not registered
+        ```json
+        {
+            "error": true,
+            "message": "Email is not registered"
+        }
+        ```
+
     - Invalid input password format
         ```json
         {
@@ -78,14 +86,6 @@
             "message": "Password must be at least 8 characters"
         }
         ```
-
-	- Email not registered
-        ```json
-        {
-            "error": true,
-            "message": "Email is not registered"
-        }
-        ``
 
 	- Wrong input password
 		```json

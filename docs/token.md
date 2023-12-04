@@ -19,7 +19,7 @@
 
 | Key            | Value                        | Required | Description                                    |
 | -------------- | ---------------------------- | -------- | ---------------------------------------------- |
-| `Cookie`       | `refreshToken=<refresh_token>`| Yes      | HTTP Cookie containing the refresh token       |
+| `Cookie`       | `refreshToken=<refresh_token>`| Yes     | HTTP Cookie containing the refresh token       |
 
 #### Example
 ```http
@@ -42,11 +42,20 @@ Cookie: refreshToken=<refresh_token>
 ### Error Responses
 
 - **Status Code:** `401 Unauthorized`
-    - Missing or invalid refresh token in the request
+    - Missing refresh token in the request
         ```json
         {
             "error": true,
-            "message": "Unauthorized: Missing or invalid access token"
+            "message": "Unauthorized: Missing refresh token"
+        }
+        ```
+
+- **Status Code:** `403 Forbidden`
+    - Invalid refresh token in the request
+        ```json
+        {
+            "error": true,
+            "message": "Forbidden: Invalid refresh token"
         }
         ```
 

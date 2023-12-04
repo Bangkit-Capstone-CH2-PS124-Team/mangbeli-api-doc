@@ -40,6 +40,8 @@
 
 The table structure is as follows:
 
+- **Users**
+
 | Field         | Type                  | Null | Key | Default | Extra          |
 | ------------- | --------------------- | ---- | --- | ------- | -------------- |
 | id            | int                   | NO   | PRI | NULL    | auto_increment |
@@ -55,6 +57,10 @@ The table structure is as follows:
 | longitude     | varchar(255)          | YES  |     | NULL    |                |
 | createdAt     | datetime              | NO   |     | NULL    |                |
 | updatedAt     | datetime              | NO   |     | NULL    |                |
+
+- **Vendors**
+
+- **Tracks**
 
 ### API Endpoints
 

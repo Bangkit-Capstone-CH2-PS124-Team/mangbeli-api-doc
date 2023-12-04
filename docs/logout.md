@@ -17,14 +17,14 @@
 
 ### Headers
 
-| Key           | Value                                | Required | Description                               |
-| ------------- | ------------------------------------ | -------- | ----------------------------------------- |
-| `Authorization`| Bearer `<accessToken>`               | Yes      | Authentication token for user authorization|
+| Key            | Value                        | Required | Description                                    |
+| -------------- | ---------------------------- | -------- | ---------------------------------------------- |
+| `Cookie`       | `refreshToken=<refresh_token>`| Yes     | HTTP Cookie containing the refresh token       |
 
 #### Example
 ```http
-GET https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/users
-Authorization: Bearer <accessToken>
+DELETE https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/logout
+Cookie: refreshToken=<refresh_token>
 ```
 
 ## Response
@@ -39,15 +39,11 @@ Authorization: Bearer <accessToken>
 }
 ```
 
+?> The refresh token in the database has been deleted, the cookie was cleared, and the user is effectively logged out.
+
 ### Error Responses
 - **Status Code:** `204 No Content`
     - No refresh token is provided or the provided refresh token is invalid
-        ```json
-        {
-            "error": true,
-            "message": "No Content"
-        }
-        ```
 
 - **Status Code:** `500 Internal Server Error`
     - Internal server error

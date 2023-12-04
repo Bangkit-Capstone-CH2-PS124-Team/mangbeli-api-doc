@@ -68,19 +68,19 @@
         }
         ```
 
-    - Invalid input password format
-        ```json
-        {
-            "error": true,
-            "message": "Password must be at least 8 characters"
-        }
-        ```
-    
     - Email already registered
         ```json
         {
             "error": true,
             "message": "Email is already registered"
+        }
+        ```
+
+    - Invalid input password format
+        ```json
+        {
+            "error": true,
+            "message": "Password must be at least 8 characters"
         }
         ```
 
