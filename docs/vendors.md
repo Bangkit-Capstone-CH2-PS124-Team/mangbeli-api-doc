@@ -23,10 +23,10 @@
 
 ### Query Parameters
 
-| Key           | Type    | Required | Description                               |
-| ------------- | ------- | -------- | ----------------------------------------- |
-| `size`        | integer | No       | Number of vendors to fetch (optional)     |
-| `location`    | string  | No       | 1 or 0, default 0, (optional), 1 get vendors with location, 0 without considering location |
+| Key           | Type     | Default | Optional | Description                                                  |
+| ------------- | -------- | ------- | -------- | ------------------------------------------------------------ |
+| `size`        | integer  | 10      | Yes      | Number of vendors to fetch (optional)                        |
+| `location`    | integer  | 0       | Yes      | Location filter (`1` to get vendors with detailed location information, `0` to get vendors without considering location) |
 
 #### Example
 ```http
