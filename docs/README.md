@@ -94,6 +94,8 @@ The table structure is as follows:
 
 - **[Location](/location)**
 
+- **[Vendors](/vendors)**
+
 - **[Token](/token)**
 
 - **[Logout](/logout)**

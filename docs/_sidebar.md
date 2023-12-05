@@ -1,8 +1,9 @@
 - [Home](/)
-- Endpoints
+- *Endpoints*
     - [Register](/register)
     - [Login](/login)
     - [Users](/users)
     - [Location](/location)
+    - [Vendors](/vendors)
     - [Token](/token)
     - [Logout](/logout)
