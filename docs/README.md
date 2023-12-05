@@ -13,23 +13,24 @@
 
 ## Overview
 
-> This API serves the Authentication functionality for the Mang Beli application.
+> This API serves the Authentication and Authorization functionality for the Mang Beli application.
 
 ### Technology
 
 > - **Runtime**: Node.js
 > - **Framework**: Express.js
 > - **Dependencies**:
->     | Package        | Version   |
->     | -------------- | --------- |
->     | bcrypt         | 5.1.1     |
->     | cookie-parser  | 1.4.6     |
->     | cors           | 2.8.5     |
->     | dotenv         | 16.3.1    |
->     | express        | 4.18.2    |
->     | jsonwebtoken   | 9.0.2     |
->     | mysql2         | 3.6.5     |
->     | sequelize      | 6.35.1    |
+>     | Package         | Version   |
+>     | --------------- | --------- |
+>     | bcrypt          | 5.1.1     |
+>     | cookie-parser   | 1.4.6     |
+>     | cors            | 2.8.5     |
+>     | dotenv          | 16.3.1    |
+>     | express         | 4.18.2    |
+>     | jsonwebtoken    | 9.0.2     |
+>     | mysql2          | 3.6.5     |
+>     | nanoid          | 5.0.4     |
+>     | sequelize       | 6.35.1    |
 
 ### Deployment
 
@@ -42,25 +43,46 @@ The table structure is as follows:
 
 - **Users**
 
-| Field         | Type                  | Null | Key | Default | Extra          |
-| ------------- | --------------------- | ---- | --- | ------- | -------------- |
-| id            | int                   | NO   | PRI | NULL    | auto_increment |
-| name          | varchar(225)          | NO   |     | NULL    |                |
-| email         | varchar(225)          | NO   | UNI | NULL    |                |
-| password      | varchar(225)          | YES  |     | NULL    |                |
-| refresh_token | text                  | YES  |     | NULL    |                |
-| no_hp         | varchar(255)          | YES  |     | NULL    |                |
-| img_profile   | varchar(255)          | YES  |     | NULL    |                |
-| role          | enum('user','vendor') | NO   |     | NULL    |                |
-| favorite      | json                  | YES  |     | NULL    |                |
-| latitude      | varchar(255)          | YES  |     | NULL    |                |
-| longitude     | varchar(255)          | YES  |     | NULL    |                |
-| createdAt     | datetime              | NO   |     | NULL    |                |
-| updatedAt     | datetime              | NO   |     | NULL    |                |
+| Field          | Type                  | Null | Key | Default | Extra |
+| -------------- | --------------------- | ---- | --- | ------- | ----- |
+| userId         | varchar(10)           | NO   | PRI | NULL    |       |
+| name           | varchar(225)          | NO   |     | NULL    |       |
+| email          | varchar(225)          | NO   | UNI | NULL    |       |
+| password       | varchar(225)          | YES  |     | NULL    |       |
+| refresh_token  | text                  | YES  |     | NULL    |       |
+| photo_url      | varchar(255)          | YES  |     | NULL    |       |
+| no_hp          | varchar(20)           | YES  |     | NULL    |       |
+| role           | enum('user','vendor') | NO   |     | NULL    |       |
+| latitude       | double                | YES  |     | NULL    |       |
+| longitude      | double                | YES  |     | NULL    |       |
+| favorite       | longtext              | YES  |     | NULL    |       |
+| createdAt      | datetime              | NO   |     | NULL    |       |
+| updatedAt      | datetime              | NO   |     | NULL    |       |
 
 - **Vendors**
 
+| Field       | Type         | Null | Key | Default | Extra |
+| ----------- | ------------ | ---- | --- | ------- | ----- |
+| vendorId    | varchar(10)  | NO   | PRI | NULL    |       |
+| userId      | varchar(10)  | NO   | MUL | NULL    |       |
+| name_vendor | varchar(225) | YES  |     | NULL    |       |
+| products    | longtext     | YES  |     | NULL    |       |
+| minPrice    | int(11)      | YES  |     | NULL    |       |
+| maxPrice    | int(11)      | YES  |     | NULL    |       |
+| createdAt   | datetime     | NO   |     | NULL    |       |
+| updatedAt   | datetime     | NO   |     | NULL    |       |
+
 - **Tracks**
+
+| Field     | Type        | Null | Key | Default | Extra |
+| --------- | ----------- | ---- | --- | ------- | ----- |
+| trackId   | varchar(10) | NO   | PRI | NULL    |       |
+| vendorId  | varchar(10) | NO   | MUL | NULL    |       |
+| userId    | varchar(10) | NO   | MUL | NULL    |       |
+| latitude  | double      | YES  |     | NULL    |       |
+| longitude | double      | YES  |     | NULL    |       |
+| createdAt | datetime    | NO   |     | NULL    |       |
+| updatedAt | datetime    | NO   |     | NULL    |       |
 
 ### API Endpoints
 
@@ -69,6 +91,8 @@ The table structure is as follows:
 - **[Login](/login)**
 
 - **[Users](/users)**
+
+- **[Location](/location)**
 
 - **[Token](/token)**
 

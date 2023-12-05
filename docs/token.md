@@ -42,21 +42,21 @@ Cookie: refreshToken=<refresh_token>
 ### Error Responses
 
 - **Status Code:** `401 Unauthorized`
-    - Missing refresh token in the request
+    - Missing access token
         ```json
         {
             "error": true,
-            "message": "Unauthorized: Missing refresh token"
+            "message": "Missing access token"
         }
         ```
 
 - **Status Code:** `403 Forbidden`
-    - Invalid refresh token in the request
+    - Invalid access token
         ```json
-        {
-            "error": true,
-            "message": "Forbidden: Invalid refresh token"
-        }
+            {
+                "error": true,
+                "message": "Invalid access token"
+            }
         ```
 
 - **Status Code:** `500 Internal Server Error`

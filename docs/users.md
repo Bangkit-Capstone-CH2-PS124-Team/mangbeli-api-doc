@@ -17,9 +17,9 @@
 
 ### Headers
 
-| Key           | Value                                | Required | Description                               |
-| ------------- | ------------------------------------ | -------- | ----------------------------------------- |
-| `Authorization`| Bearer `<accessToken>`               | Yes      | Authentication token for user authorization|
+| Key           | Value                                | Required | Description                                |
+| ------------- | ------------------------------------ | -------- | ------------------------------------------ |
+| `Authorization`| Bearer `<accessToken>`              | Yes      | Authentication token for user authorization|
 
 #### Example
 ```http
@@ -54,12 +54,21 @@ Authorization: Bearer <accessToken>
 ### Error Responses
 
 - **Status Code:** `401 Unauthorized`
-    - Missing or invalid access token
+    - Missing access token
         ```json
         {
             "error": true,
-            "message": "Unauthorized: Missing access token"
+            "message": "Missing access token"
         }
+        ```
+
+- **Status Code:** `403 Forbidden`
+    - Invalid access token
+        ```json
+            {
+                "error": true,
+                "message": "Invalid access token"
+            }
         ```
 
 - **Status Code:** `500 Internal Server Error`

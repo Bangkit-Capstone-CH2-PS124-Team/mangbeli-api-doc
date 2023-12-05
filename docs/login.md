@@ -17,17 +17,19 @@
 
 ### Request Body
 
-| Parameter | Type   | Required | Description                        |
-| --------- | ------ | -------- | ---------------------------------- |
-| `email`   | string | Yes      | User's email address               |
+| Parameter | Type   | Required | Description                            |
+| --------- | ------ | -------- | -------------------------------------- |
+| `email`   | string | Yes      | User's email address                   |
 | `password`| string | Yes      | User's password (at least 8 characters)|
 
 #### Example
+```http
+POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/login
+Content-Type: application/json
 
-```json
 {
-  "email": "john@example.com",
-  "password": "securepassword"
+    "email": "john@example.com",
+    "password": "securepassword",
 }
 ```
 
@@ -41,11 +43,11 @@
   	"error": false,
   	"message": "Login successful",
   	"loginResult": {
-    	"userId": 1,
+    	"userId": "527s8rXvQy",
     	"name": "John Doe",
     	"email": "john@example.com",
     	"role": "user",
-    	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJsb3JlbSIsImVtYWlsIjoibG9yZW1AdGVzdC5jb20iLCJpYXQiOjE3MDE0Mjk5MTYsImV4cCI6MTc5MTQyOTk3Nn0.LqLzahtlOIz_zseqb17XccgrU4VrNjg1LyGtypRufVx"
+    	"accessToken": "eyJhbGciOiJIUsI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjdHOHJYdlF5IiwiZW1haWwiOiJmYWl6QG1hbmdiZWxpLmNvbSIsInJsbGUiOiJ1c2VyIiwiaWF0IjoxNzAxNzYzODEzsCJleHAiOjE3MDE4NTAyMTN9.dIcsi2GJaBD_0JDQ17lPplmJbsh16mxtk8OsqfVPVug"
 	}
 }
 ```

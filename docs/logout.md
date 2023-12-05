@@ -17,9 +17,9 @@
 
 ### Headers
 
-| Key            | Value                        | Required | Description                                    |
-| -------------- | ---------------------------- | -------- | ---------------------------------------------- |
-| `Cookie`       | `refreshToken=<refresh_token>`| Yes     | HTTP Cookie containing the refresh token       |
+| Key            | Value                         | Required | Description                                    |
+| -------------- | ----------------------------- | -------- | ---------------------------------------------- |
+| `Cookie`       | `refreshToken=<refresh_token>`| Yes      | HTTP Cookie containing the refresh token       |
 
 #### Example
 ```http

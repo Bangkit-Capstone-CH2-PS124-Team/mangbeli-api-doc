@@ -17,17 +17,19 @@
 
 ### Request Body
 
-| Parameter     | Type   | Required | Description                                      |
-| ------------- | ------ | -------- | ------------------------------------------------ |
-| `name`        | string | Yes      | The user's name                                  |
-| `email`       | string | Yes      | The user's email address                         |
-| `password`    | string | Yes      | The user's password (at least 8 characters)      |
+| Parameter     | Type   | Required | Description                                       |
+| ------------- | ------ | -------- | ------------------------------------------------- |
+| `name`        | string | Yes      | The user's name                                   |
+| `email`       | string | Yes      | The user's email address                          |
+| `password`    | string | Yes      | The user's password (at least 8 characters)       |
 | `confPassword`| string | Yes      | Confirm password (must match the `password` field)|
-| `role`        | string | Yes      | The user's role (e.g., user or vendor)           |
+| `role`        | string | Yes      | The user's role (e.g., user or vendor)            |
 
 #### Example
+```http
+POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/register
+Content-Type: application/json
 
-```json
 {
     "name": "John Doe",
     "email": "john@example.com",
