@@ -46,7 +46,7 @@ Authorization: Bearer <accessToken>
             "createdAt": "2023-12-01T06:25:18.000Z",
             "updatedAt": "2023-12-01T09:04:03.000Z"
         },
-        And other users...
+        // ... (more users)
     ]
 }
 ```
