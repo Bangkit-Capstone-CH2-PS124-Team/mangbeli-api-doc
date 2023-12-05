@@ -1,4 +1,7 @@
-# **API Documentation - Update User Location**
+# **API Documentation - User Location**
+
+---
+## **Update User Location**
 
 ## URL
 
@@ -91,8 +94,8 @@ Content-Type: application/json
         }
         ```
 
-
-# **API Documentation - Get User Location**
+---
+## **Get User Location**
 
 ## URL
 
@@ -101,7 +104,7 @@ Content-Type: application/json
 ## Endpoint
 
 - **URL:** `/location`
-- **Method:** `location`
+- **Method:** `GET`
 
 ## Description
 
