@@ -3,5 +3,6 @@
     - [Register](/register)
     - [Login](/login)
     - [Users](/users)
+    - [Location](/location)
     - [Token](/token)
     - [Logout](/logout)
