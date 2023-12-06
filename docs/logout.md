@@ -22,9 +22,9 @@
 | `Cookie`       | `refreshToken=<refresh_token>`| Yes      | HTTP Cookie containing the refresh token       |
 
 #### Example
-```http
-DELETE https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/logout
-Cookie: refreshToken=<refresh_token>
+```bash
+curl -X DELETE https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/logout \
+-H "Cookie: refreshToken=<refresh_token>"
 ```
 
 ## Response

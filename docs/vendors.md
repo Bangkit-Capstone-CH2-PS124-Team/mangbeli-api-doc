@@ -29,9 +29,9 @@
 | `location`    | integer  | 0       | Yes      | Location filter (`1` to get vendors with detailed location information, `0` to get vendors without considering location) |
 
 #### Example
-```http
-GET https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?size=10&location=1
-Authorization: Bearer <accessToken>
+```bash
+curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?size=10&location=1" \
+-H "Authorization: Bearer <accessToken>"
 ```
 
 ## Response

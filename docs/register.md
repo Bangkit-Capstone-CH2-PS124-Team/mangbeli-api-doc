@@ -26,17 +26,16 @@
 | `role`        | string | Yes      | The user's role (e.g., user or vendor)            |
 
 #### Example
-```http
-POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/register
-Content-Type: application/json
-
-{
+```bash
+curl -X POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/register \
+-H "Content-Type: application/json" \
+-d '{
     "name": "John Doe",
     "email": "john@example.com",
     "password": "securepassword",
     "confPassword": "securepassword",
     "role": "user"
-}
+}'
 ```
 
 ## Response

@@ -23,14 +23,13 @@
 | `password`| string | Yes      | User's password (at least 8 characters)|
 
 #### Example
-```http
-POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/login
-Content-Type: application/json
-
-{
+```bash
+curl -X POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/login \
+-H "Content-Type: application/json" \
+-d '{
     "email": "john@example.com",
-    "password": "securepassword",
-}
+    "password": "securepassword"
+}'
 ```
 
 ## Response

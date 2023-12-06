@@ -32,15 +32,14 @@
 | `longitude` | double  | Yes      | New longitude coordinate         |
 
 #### Example
-```http
-PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location
-Authorization: Bearer <accessToken>
-Content-Type: application/json
-
-{
+```bash
+curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location \
+-H "Authorization: Bearer <accessToken>" \
+-H "Content-Type: application/json" \
+-d '{
     "latitude": -6.17521,
     "longitude": 106.82718
-}
+}'
 ```
 
 ## Response
@@ -125,9 +124,9 @@ Content-Type: application/json
 | `userId`      | string                               | Yes      | User ID to fetch location for             |
 
 #### Example
-```http
-GET https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location?userId=527s8rXvQy
-Authorization: Bearer <accessToken>
+```bash
+curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location?userId=527s8rXvQy" \
+-H "Authorization: Bearer <accessToken>"
 ```
 
 ## Response
