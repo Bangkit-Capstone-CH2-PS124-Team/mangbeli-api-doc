@@ -50,7 +50,7 @@ The table structure is as follows:
 | email          | varchar(225)          | NO   | UNI | NULL    |       |
 | password       | varchar(225)          | YES  |     | NULL    |       |
 | refresh_token  | text                  | YES  |     | NULL    |       |
-| photo_url      | varchar(255)          | YES  |     | NULL    |       |
+| image_url      | varchar(255)          | YES  |     | NULL    |       |
 | no_hp          | varchar(20)           | YES  |     | NULL    |       |
 | role           | enum('user','vendor') | NO   |     | NULL    |       |
 | latitude       | double                | YES  |     | NULL    |       |

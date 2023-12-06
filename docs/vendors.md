@@ -47,7 +47,7 @@ Authorization: Bearer <accessToken>
         {
             "vendorId": "BQX7Slyu8W",
             "userId": "sxSdOtPSeU",
-            "photo_url": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+            "image_url": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
             "name": "Mang Dadang",
             "name_vendor": "Mie Ayam Dadang",
             "no_hp": "089817264568",
