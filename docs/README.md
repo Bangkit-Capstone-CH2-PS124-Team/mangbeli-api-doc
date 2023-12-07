@@ -92,12 +92,14 @@ The table structure is as follows:
 
 - **[User](/user)**
 
-- **[Location](/location)**
+- **[Vendor](/vendor)**
 
 - **[Vendors](/vendors)**
+
+- **[Location](/location)**
 
 - **[Token](/token)**
 
 - **[Logout](/logout)**
 
-Click on each endpoint to view detailed documentation.
+?> Click on each endpoint to view detailed documentation.
