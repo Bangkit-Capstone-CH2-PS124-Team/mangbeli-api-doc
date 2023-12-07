@@ -212,7 +212,7 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile \
 ## Endpoint
 
 - **URL:** `/user/profile/upload`
-- **Method:** `PATCH`
+- **Method:** `POST`
 
 ## Description
 
