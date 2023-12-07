@@ -93,8 +93,9 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location \
         }
         ```
 
+
 ---
-## **Get User Location**
+## **Get User Location by userId**
 
 ## URL
 

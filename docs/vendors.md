@@ -23,10 +23,10 @@
 
 ### Query Parameters
 
-| Key           | Type     | Default | Optional | Description                                                  |
+| Key           | Type     | Default | Required | Description                                                  |
 | ------------- | -------- | ------- | -------- | ------------------------------------------------------------ |
-| `size`        | integer  | 10      | Yes      | Number of vendors to fetch (optional)                        |
-| `location`    | integer  | 0       | Yes      | Location filter (`1` to get vendors with detailed location information, `0` to get vendors without considering location) |
+| `size`        | integer  | 10      | Optional | Number of vendors to fetch (optional)                        |
+| `location`    | integer  | 0       | Optional | Location filter (`1` to get vendors with detailed location information, `0` to get vendors without considering location) |
 
 #### Example
 ```bash
