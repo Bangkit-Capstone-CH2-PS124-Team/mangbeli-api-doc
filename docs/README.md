@@ -90,6 +90,8 @@ The table structure is as follows:
 
 - **[Login](/login)**
 
+- **[User](/user)**
+
 - **[Location](/location)**
 
 - **[Vendors](/vendors)**

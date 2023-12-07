@@ -2,6 +2,7 @@
 - *Endpoints*
     - [Register](/register)
     - [Login](/login)
+    - [User](/user)
     - [Location](/location)
     - [Vendors](/vendors)
     - [Token](/token)
