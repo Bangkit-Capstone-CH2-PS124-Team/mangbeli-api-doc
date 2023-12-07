@@ -65,7 +65,7 @@ curl -X POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/login \
         ```
 
     - Invalid input email format
-         ```json
+        ```json
         {
             "error": true,
             "message": "Invalid email format"

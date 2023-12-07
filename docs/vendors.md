@@ -76,10 +76,10 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?size=10&loc
 - **Status Code:** `403 Forbidden`
     - Invalid access token
         ```json
-            {
-                "error": true,
-                "message": "Invalid access token"
-            }
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
         ```
 
 - **Status Code:** `500 Internal Server Error`

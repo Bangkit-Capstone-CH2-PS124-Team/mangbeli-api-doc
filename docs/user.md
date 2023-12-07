@@ -69,10 +69,10 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile" \
 - **Status Code:** `403 Forbidden`
     - Invalid access token
         ```json
-            {
-                "error": true,
-                "message": "Invalid access token"
-            }
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
         ```
 
 - **Status Code:** `500 Internal Server Error`
@@ -185,10 +185,10 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile \
 - **Status Code:** `403 Forbidden`
     - Invalid access token
         ```json
-            {
-                "error": true,
-                "message": "Invalid access token"
-            }
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
         ```
 
 - **Status Code:** `500 Internal Server Error`
@@ -304,10 +304,10 @@ curl -X POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile/upload
 - **Status Code:** `403 Forbidden`
     - Invalid access token
         ```json
-            {
-                "error": true,
-                "message": "Invalid access token"
-            }
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
         ```
 
 - **Status Code:** `500 Internal Server Error`
@@ -405,19 +405,19 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user?userId=527s8rX
 - **Status Code:** `403 Forbidden`
     - Invalid access token
         ```json
-            {
-                "error": true,
-                "message": "Invalid access token"
-            }
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
         ```
 
 - **Status Code:** `404 Not Found`
     - Specified userId is not found
         ```json
-            {
-                "error": true,
-                "message": "User not found"
-            }
+        {
+            "error": true,
+            "message": "User not found"
+        }
         ```
 
 - **Status Code:** `500 Internal Server Error`

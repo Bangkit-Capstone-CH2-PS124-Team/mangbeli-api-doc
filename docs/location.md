@@ -77,10 +77,10 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location \
 - **Status Code:** `403 Forbidden`
     - Invalid access token
         ```json
-            {
-                "error": true,
-                "message": "Invalid access token"
-            }
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
         ```
 
 - **Status Code:** `500 Internal Server Error`
@@ -167,19 +167,19 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location?userId=527
 - **Status Code:** `403 Forbidden`
     - Invalid access token
         ```json
-            {
-                "error": true,
-                "message": "Invalid access token"
-            }
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
         ```
 
 - **Status Code:** `404 Not Found`
     - Specified userId is not found
         ```json
-            {
-                "error": true,
-                "message": "User not found"
-            }
+        {
+            "error": true,
+            "message": "User not found"
+        }
         ```
 
 - **Status Code:** `500 Internal Server Error`
