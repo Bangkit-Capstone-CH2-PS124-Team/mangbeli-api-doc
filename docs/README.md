@@ -96,6 +96,8 @@ The table structure is as follows:
 
 - **[Vendors](/vendors)**
 
+- **[Tracks](/tracks)**
+
 - **[Location](/location)**
 
 - **[Token](/token)**

@@ -5,6 +5,7 @@
     - [User](/user)
     - [Vendor](/vendor)
     - [Vendors](/vendors)
+    - [Tracks](/tracks)
     - [Location](/location)
     - [Token](/token)
     - [Logout](/logout)
