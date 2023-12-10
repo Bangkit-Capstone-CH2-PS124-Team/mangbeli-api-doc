@@ -119,6 +119,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile" \
 | `newPassword`  | string   | Optional | New password for the user (if updating password)     |
 | `no_hp`        | string   | Optional | New phone number of the user                         |
 | `favorite`     | string   | Optional | New user favorites                                   |
+| `role`         | string   | Optional | The user's role (e.g., user or vendor)               |
 
 #### Example
 ```bash
@@ -130,7 +131,8 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile \
         "oldPassword": "securepassword",
         "newPassword": "newsecurepassword",
         "no_hp": "08987654210",
-        "favorite": "[\"Mie Ayam Pangsit\"]"
+        "favorite": "[\"Mie Ayam Pangsit\"]",
+        "role": "user",
     }'
 ```
 
@@ -172,6 +174,14 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile \
         "message": "Password and oldPassword do not match"
     }
     ```
+
+    - Invalid role
+        ```json
+        {
+            "error": true,
+            "message": "Invalid role"
+        }
+        ```
 
 - **Status Code:** `401 Unauthorized`
     - Missing access token

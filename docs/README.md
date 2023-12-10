@@ -52,7 +52,7 @@ The table structure is as follows:
 | refresh_token  | text                  | YES  |     | NULL    |       |
 | image_url      | varchar(255)          | YES  |     | NULL    |       |
 | no_hp          | varchar(20)           | YES  |     | NULL    |       |
-| role           | enum('user','vendor') | NO   |     | NULL    |       |
+| role           | enum('user','vendor') | YES  |     | NULL    |       |
 | latitude       | double                | YES  |     | NULL    |       |
 | longitude      | double                | YES  |     | NULL    |       |
 | favorite       | longtext              | YES  |     | NULL    |       |

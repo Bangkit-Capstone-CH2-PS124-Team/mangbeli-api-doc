@@ -23,7 +23,6 @@
 | `email`       | string | Yes      | The user's email address                          |
 | `password`    | string | Yes      | The user's password (at least 8 characters)       |
 | `confPassword`| string | Yes      | Confirm password (must match the `password` field)|
-| `role`        | string | Yes      | The user's role (e.g., user or vendor)            |
 
 #### Example
 ```bash
@@ -33,8 +32,7 @@ curl -X POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/register \
     "name": "John Doe",
     "email": "john@example.com",
     "password": "securepassword",
-    "confPassword": "securepassword",
-    "role": "user"
+    "confPassword": "securepassword"
 }'
 ```
 
