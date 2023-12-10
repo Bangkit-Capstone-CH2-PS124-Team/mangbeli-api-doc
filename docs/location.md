@@ -20,9 +20,9 @@
 
 ### Headers
 
-| Key           | Value                                | Required | Description                                |
-| ------------- | ------------------------------------ | -------- | ------------------------------------------ |
-| `Authorization`| Bearer `<accessToken>`              | Yes      | Authentication token for user authorization|
+| Key            | Value                                | Required | Description                                |
+| -------------- | ------------------------------------ | -------- | ------------------------------------------ |
+| `Authorization`| Bearer `<accessToken>`               | Yes      | Authentication token for user authorization|
 
 ### Body
 
@@ -114,9 +114,9 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location \
 
 ### Headers
 
-| Key           | Value                                | Required | Description                                |
-| ------------- | ------------------------------------ | -------- | ------------------------------------------ |
-| `Authorization`| Bearer `<accessToken>`              | Yes      | Authentication token for user authorization|
+| Key            | Value                                | Required | Description                                |
+| -------------- | ------------------------------------ | -------- | ------------------------------------------ |
+| `Authorization`| Bearer `<accessToken>`               | Yes      | Authentication token for user authorization|
 
 ### Query Parameters
 
@@ -179,6 +179,79 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location?userId=527
         {
             "error": true,
             "message": "User not found"
+        }
+        ```
+
+- **Status Code:** `500 Internal Server Error`
+    - Internal server error
+        ```json
+        {
+            "error": true,
+            "message": "Internal Server Error",
+            "errorMessage": "Details about the internal server error"
+        }
+        ```
+
+
+---
+## **Delete User Location**
+
+## URL
+
+**https://mangbeli-auth-1-vb76nyymeq-et.a.run.app**
+
+## Endpoint
+
+- **URL:** `/location`
+- **Method:** `DELETE`
+
+## Description
+
+> This endpoint is used to delete the location coordinates of a user.
+
+## Request
+
+### Headers
+
+| Key            | Value                                | Required | Description                                |
+| -------------- | ------------------------------------ | -------- | ------------------------------------------ |
+| `Authorization`| Bearer `<accessToken>`               | Yes      | Authentication token for user authorization|
+
+#### Example
+```bash
+curl -X DELETE https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/location \
+-H "Authorization: Bearer <accessToken>" \
+```
+
+## Response
+
+### Success Response
+
+- **Status Code:** `200 OK`
+```json
+{
+    "error": false,
+    "message": "Location deleted successfully"
+}
+```
+
+### Error Responses
+
+- **Status Code:** `401 Unauthorized`
+    - Missing access token
+        ```json
+        {
+            "error": true,
+            "message": "Missing access token"
+        }
+        ```
+
+- **Status Code:** `403 Forbidden`
+    - Invalid access token
+        ```json
+        {
+            "error": true,
+            "message": "Invalid access token"
         }
         ```
 
