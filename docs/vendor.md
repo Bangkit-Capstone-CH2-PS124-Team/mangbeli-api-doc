@@ -42,7 +42,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendor/profile" \
     "dataVendor": {
         "vendorId": "BQX7Slyu8W",
         "userId": "sxSdOtPSeU",
-        "name_vendor": "Mie Ayam Dadang",
+        "nameVendor": "Mie Ayam Dadang",
         "products": "[\"Mie Ayam Pangsit\", \"Mie Ayam Bakso\"]",
         "minPrice": 10000,
         "maxPrice": 25000,
@@ -119,7 +119,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendor/profile" \
 
 | Key             | Type    | Required | Description                      |
 | --------------- | ------- | -------- | -------------------------------- |
-| `name_vendor`   | string  | Optional | New name of the vendor            |
+| `nameVendor`    | string  | Optional | New name of the vendor            |
 | `products`      | string  | Optional | Updated product details          |
 | `minPrice`      | int     | Optional | New minimum price                |
 | `maxPrice`      | int     | Optional | New maximum price                |
@@ -129,7 +129,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendor/profile" \
 curl -X PATCH "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/update-profile" \
 -H "Authorization: Bearer <accessToken>" \
 -d '{
-    "name_vendor": "Mie Ayam Dadang Makmur",
+    "nameVendor": "Mie Ayam Dadang Makmur",
     "products": "["Mie Ayam Pangsit", "Mie Ayam Bakso", "Mie Yamin"]",
     "minPrice": 11000,
     "maxPrice": 27000
@@ -235,7 +235,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendor?vendorId=ciz
     "dataVendor": {
         "vendorId": "ciz9KF75VR",
         "userId": "oy4wePSPdI",
-        "name_vendor": "Bakso Sri",
+        "nameVendor": "Bakso Sri",
         "products": "[\"Bakso Urat\", \"Bakso Telor\", \"Bakso Mercon\"]",
         "minPrice": 12000,
         "maxPrice": 30000,

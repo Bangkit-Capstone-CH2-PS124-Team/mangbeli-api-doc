@@ -43,8 +43,8 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile" \
         "userId": "527s8rXvQy",
         "name": "John Doe",
         "email": "john@example.com",
-        "image_url": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
-        "no_hp": "081234567890",
+        "imageUrl": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+        "noHp": "081234567890",
         "role": "user",
         "latitude": -6.17521,
         "longitude": 106.82718,
@@ -117,7 +117,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile" \
 | `name`         | string   | Optional | New name of the user                                 |
 | `oldPassword`  | string   | Optional | Old password for verification (if updating password) |
 | `newPassword`  | string   | Optional | New password for the user (if updating password)     |
-| `no_hp`        | string   | Optional | New phone number of the user                         |
+| `noHp`         | string   | Optional | New phone number of the user                         |
 | `favorite`     | string   | Optional | New user favorites                                   |
 | `role`         | string   | Optional | The user's role (e.g., user or vendor)               |
 
@@ -130,7 +130,7 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile \
         "name": "John Doe Heisenberg",
         "oldPassword": "securepassword",
         "newPassword": "newsecurepassword",
-        "no_hp": "08987654210",
+        "noHp": "08987654210",
         "favorite": "[\"Mie Ayam Pangsit\"]",
         "role": "user",
     }'
@@ -380,8 +380,8 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user?userId=527s8rX
         "userId": "sxSdOtPSeU",
         "name": "Mang Dadang",
         "email": "dadang@mangbeli.com",
-        "image_url": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
-        "no_hp": "089817264568",
+        "imageUrl": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+        "noHp": "089817264568",
         "role": "vendor",
         "latitude": -2.0048299,
         "longitude": 102.5775299,

@@ -19,12 +19,12 @@
 
 | Key            | Value                        | Required | Description                                    |
 | -------------- | ---------------------------- | -------- | ---------------------------------------------- |
-| `Cookie`       | `refreshToken=<refresh_token>`| Yes     | HTTP Cookie containing the refresh token       |
+| `Cookie`       | `refreshToken=<refreshToken>`| Yes      | HTTP Cookie containing the refresh token       |
 
 #### Example
 ```bash
 curl -X GET https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/token \
---cookie "refreshToken=<refresh_token>"
+--cookie "refreshToken=<refreshToken>"
 ```
 
 ## Response

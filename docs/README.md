@@ -49,9 +49,9 @@ The table structure is as follows:
 | name           | varchar(225)          | NO   |     | NULL    |       |
 | email          | varchar(225)          | NO   | UNI | NULL    |       |
 | password       | varchar(225)          | YES  |     | NULL    |       |
-| refresh_token  | text                  | YES  |     | NULL    |       |
-| image_url      | varchar(255)          | YES  |     | NULL    |       |
-| no_hp          | varchar(20)           | YES  |     | NULL    |       |
+| refreshToken   | text                  | YES  |     | NULL    |       |
+| imageUrl       | varchar(255)          | YES  |     | NULL    |       |
+| noHp           | varchar(20)           | YES  |     | NULL    |       |
 | role           | enum('user','vendor') | YES  |     | NULL    |       |
 | latitude       | double                | YES  |     | NULL    |       |
 | longitude      | double                | YES  |     | NULL    |       |
@@ -65,7 +65,7 @@ The table structure is as follows:
 | ----------- | ------------ | ---- | --- | ------- | ----- |
 | vendorId    | varchar(10)  | NO   | PRI | NULL    |       |
 | userId      | varchar(10)  | NO   | MUL | NULL    |       |
-| name_vendor | varchar(225) | YES  |     | NULL    |       |
+| nameVendor  | varchar(225) | YES  |     | NULL    |       |
 | products    | longtext     | YES  |     | NULL    |       |
 | minPrice    | int(11)      | YES  |     | NULL    |       |
 | maxPrice    | int(11)      | YES  |     | NULL    |       |
