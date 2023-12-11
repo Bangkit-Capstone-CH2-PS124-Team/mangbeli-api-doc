@@ -51,7 +51,7 @@ curl -X POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/login \
 }
 ```
 
-?> accessToken are only **valid** for **1 hour**.
+?> accessToken are only **valid** for **30 days**.
 
 ### Error Responses
 
