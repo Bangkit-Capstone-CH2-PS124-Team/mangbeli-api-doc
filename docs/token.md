@@ -24,7 +24,7 @@
 #### Example
 ```bash
 curl -X GET https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/token \
---cookie "refreshToken=<refreshToken>"
+-H "Cookie: refreshToken=<refreshToken>"
 ```
 
 ## Response

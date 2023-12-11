@@ -130,7 +130,7 @@ curl -X PATCH "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/update-profile" \
 -H "Authorization: Bearer <accessToken>" \
 -d '{
     "nameVendor": "Mie Ayam Dadang Makmur",
-    "products": "["Mie Ayam Pangsit", "Mie Ayam Bakso", "Mie Yamin"]",
+    "products": ["Mie Ayam Pangsit", "Mie Ayam Bakso", "Mie Yamin"],
     "minPrice": 11000,
     "maxPrice": 27000
     }'

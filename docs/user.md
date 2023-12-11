@@ -130,9 +130,9 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile \
         "name": "John Doe Heisenberg",
         "oldPassword": "securepassword",
         "newPassword": "newsecurepassword",
-        "noHp": "08987654210",
-        "favorite": "[\"Mie Ayam Pangsit\"]",
-        "role": "user",
+        "noHp": "08123456789",
+        "favorite": ["Mie Ayam Pangsit"],
+        "role": "user"
     }'
 ```
 
