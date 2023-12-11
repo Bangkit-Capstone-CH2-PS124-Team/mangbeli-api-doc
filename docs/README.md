@@ -20,17 +20,19 @@
 > - **Runtime**: Node.js
 > - **Framework**: Express.js
 > - **Dependencies**:
->     | Package         | Version   |
->     | --------------- | --------- |
->     | bcrypt          | 5.1.1     |
->     | cookie-parser   | 1.4.6     |
->     | cors            | 2.8.5     |
->     | dotenv          | 16.3.1    |
->     | express         | 4.18.2    |
->     | jsonwebtoken    | 9.0.2     |
->     | mysql2          | 3.6.5     |
->     | nanoid          | 5.0.4     |
->     | sequelize       | 6.35.1    |
+>     | Package               | Version   |
+>     | --------------------- | --------- |
+>     | @google-cloud/storage | 7.7.0     |
+>     | bcrypt                | 5.1.1     |
+>     | cookie-parser         | 1.4.6     |
+>     | cors                  | 2.8.5     |
+>     | dotenv                | 16.3.1    |
+>     | express               | 4.18.2    |
+>     | jsonwebtoken          | 9.0.2     |
+>     | multer                | 1.4.5     |
+>     | mysql2                | 3.6.5     |
+>     | nanoid                | 5.0.4     |
+>     | sequelize             | 6.35.1    |
 
 ### Deployment
 
