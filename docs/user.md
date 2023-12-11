@@ -242,7 +242,7 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile \
 | ------------ | -------- | -------- | ------------------------------------- |
 | `image`      | File     | Yes      | Image file to be uploaded             |
 
-?> `Content-Type` must be `form-data`.
+?> `Content-Type` must be `multipart/form-data`.
 
 #### Example
 ```bash
@@ -264,6 +264,8 @@ curl -X POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile/upload
     "imageUrl": "https://storage.googleapis.com/mangbeli-profile-images/527s8rXvQy-1701932752478.jpg"
 }
 ```
+
+?> The old user profile image will be deleted after the new profile image has been successfully uploaded.
 
 ### Error Responses
 
@@ -317,6 +319,15 @@ curl -X POST https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile/upload
         {
             "error": true,
             "message": "Invalid access token"
+        }
+        ```
+
+- **Status Code:** `415 Unsupported Media Type`
+    - `Content-Type` not `multipart/form-data`
+        ```json
+        {
+            "error": true,
+            "message": "Unsupported Media Type"
         }
         ```
 
