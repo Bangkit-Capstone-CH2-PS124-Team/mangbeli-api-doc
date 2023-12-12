@@ -23,14 +23,29 @@
 
 ### Query Parameters
 
-| Key           | Type     | Default | Required | Description                                                  |
-| ------------- | -------- | ------- | -------- | ------------------------------------------------------------ |
-| `size`        | integer  | 10      | Optional | Number of vendors to fetch (optional)                        |
-| `location`    | integer  | 0       | Optional | Location filter (`1` to get vendors with detailed location information, `0` to get vendors without considering location) |
+| Key         | Type    | Required | Description                                                                                                              |
+| ----------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `page`      | integer | Optional | Page number for pagination (default: `1`)                                                                                |
+| `size`      | integer | Optional | Number of vendors to fetch per page (default: `10`)                                                                      |
+| `location`  | integer | Optional | Location filter (`0` or `1`, default: `0`) - `1`: get vendors with location, `0`: without considering location           |
+| `null`      | integer | Optional | Show vendors with null coordinates (`0` or `1`, default: `0`) - `1`: show null coordinates, `0`: not show vendors with null coordinates |
+| `filter`    | string  | Optional | Sorting/filtering options - `name`, `minPrice`, `maxPrice`, `nearby`                                                     |
+| `latitude`  | float   | Optional | Latitude coordinate for nearby filtering (required if `filter` is `nearby`)                                              |
+| `longitude` | float   | Optional | Longitude coordinate for nearby filtering (required if `filter` is `nearby`)                                             |
+| `search`    | string  | Optional | Search query for name vendors or products - must be at least 2 characters long                                           |
 
 #### Example
+- Example request **#1**
+
 ```bash
-curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?size=10&location=1" \
+curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?page=1&size=10" \
+-H "Authorization: Bearer <accessToken>"
+```
+
+- Example request **#2**
+
+```bash
+curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?page=1&size=5&location=1&filter=nearby&latitude=-3.0049999&longitude=103.5779999&null=1&search=bakso" \
 -H "Authorization: Bearer <accessToken>"
 ```
 
@@ -39,6 +54,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?size=10&loc
 ### Success Response
 
 - **Status Code:** `200 OK`
+    - Example response **#1**
 ```json
 {
     "error": false,
@@ -47,22 +63,85 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?size=10&loc
         {
             "vendorId": "BQX7Slyu8W",
             "userId": "sxSdOtPSeU",
-            "image_url": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+            "image_url": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
             "name": "Mang Dadang",
             "nameVendor": "Mie Ayam Dadang",
             "no_hp": "089817264568",
-            "products": "[\"Mie Ayam Pangsit\", \"Mie Ayam Bakso\"]",
+            "products": ["Mie Ayam Pangsit", "Mie Ayam Bakso"],
+            "minPrice": 10000,
+            "maxPrice": 25000,
+        },
+        // ... (9 more vendors)
+    ],
+    "currentPage": 1,
+    "totalPages": 3
+}
+```
+
+    - Example response **#2**
+```json
+{
+    "error": false,
+    "message": "Vendors fetched successfully",
+    "listVendors": [
+        {
+            "vendorId": "BQX7Slyu8W",
+            "userId": "sxSdOtPSeU",
+            "image_url": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+            "name": "Mang Dadang",
+            "nameVendor": "Mie Ayam Dadang",
+            "no_hp": "089817264568",
+            "products": ["Mie Ayam Pangsit", "Mie Ayam Bakso"],
             "minPrice": 10000,
             "maxPrice": 25000,
             "latitude": -3.0048287,
-            "longitude": 103.5775259
+            "longitude": 103.5775259,
+            "distance": "2.5 KM"
         },
-        // ... (more vendors)
-    ]
+        // ... (4 more vendors)
+    ],
+    "currentPage": 1,
+    "totalPages": 5
 }
 ```
 
 ### Error Responses
+
+- **Status Code:** `400 Bad Request`
+    - Invalid input or missing fields
+        ```json
+        {
+            "error": true,
+            "message": "Invalid value parameter <parameter>"
+        }
+        ```
+
+    ?> `filter`=`nearby` required parameters `location`, `latitude`, `longitude`
+
+    - Invalid value parameter location for nearby filter
+        ```json
+        {
+            "error": true,
+            "message": "Value parameter location required and must be 1 when filter is 'nearby'"
+        }
+        ```
+
+    - Latitude is required for nearby filter
+        ```json
+        {
+            "error": true,
+            "message": "Value parameter latitude required"
+        }
+        ```
+
+    - Longitude is required for nearby filter
+        ```json
+        {
+            "error": true,
+            "message": "Value parameter longitude required"
+        }
+        ```
+    
 
 - **Status Code:** `401 Unauthorized`
     - Missing access token
