@@ -217,8 +217,6 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors/maps" \
         },
         // ... (more vendors)
     ],
-    "currentPage": 1,
-    "totalPages": 5
 }
 ```
 
