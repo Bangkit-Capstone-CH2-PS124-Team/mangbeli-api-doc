@@ -15,11 +15,18 @@
 
 ## Request
 
-?> At this time, this endpoint does not require any specific request parameters.
+### Headers
+
+| Key            | Value                  | Required | Description                                |
+| -------------- | ---------------------- | -------- | ------------------------------------------ |
+| `Authorization`| Bearer `<accessToken>` | Yes      | Authentication token for user authorization|
+
+?> `accessToken` = `MangBeli-CH2-PS124`
 
 #### Example
 ```bash
-curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/tracks"
+curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/tracks" \
+-H "Authorization: Bearer <accessToken>"
 ```
 
 ## Response
@@ -54,6 +61,24 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/tracks"
 ```
 
 ### Error Responses
+
+- **Status Code:** `401 Unauthorized`
+    - Missing access token
+        ```json
+        {
+            "error": true,
+            "message": "Missing access token"
+        }
+        ```
+
+- **Status Code:** `403 Forbidden`
+    - Invalid access token
+        ```json
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
+        ```
 
 - **Status Code:** `500 Internal Server Error`
     - Internal server error
