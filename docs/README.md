@@ -94,6 +94,8 @@ The table structure is as follows:
 
 - **[User](/user)**
 
+- **[Users](/users)**
+
 - **[Vendor](/vendor)**
 
 - **[Vendors](/vendors)**

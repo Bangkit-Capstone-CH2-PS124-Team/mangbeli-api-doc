@@ -3,6 +3,7 @@
     - [Register](/register)
     - [Login](/login)
     - [User](/user)
+    - [Users](/users)
     - [Vendor](/vendor)
     - [Vendors](/vendors)
     - [Tracks](/tracks)
