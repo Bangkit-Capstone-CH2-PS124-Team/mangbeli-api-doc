@@ -43,7 +43,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendor/profile" \
         "vendorId": "BQX7Slyu8W",
         "userId": "sxSdOtPSeU",
         "nameVendor": "Mie Ayam Dadang",
-        "products": "[\"Mie Ayam Pangsit\", \"Mie Ayam Bakso\"]",
+        "products": ["Mie Ayam Pangsit", "Mie Ayam Bakso"],
         "minPrice": 10000,
         "maxPrice": 25000,
         "createdAt": "2023-12-05T06:29:55.000Z",
@@ -235,12 +235,16 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendor?vendorId=ciz
     "dataVendor": {
         "vendorId": "ciz9KF75VR",
         "userId": "oy4wePSPdI",
+        "image_url": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+        "name": "Bu Sri",
         "nameVendor": "Bakso Sri",
-        "products": "[\"Bakso Urat\", \"Bakso Telor\", \"Bakso Mercon\"]",
+        "no_hp": "089817264555",
+        "products": ["Bakso Urat", "Bakso Telor", "Bakso Mercon"],
         "minPrice": 12000,
         "maxPrice": 30000,
-        "createdAt": "2023-12-05T06:30:30.000Z",
-        "updatedAt": "2023-12-05T06:30:30.000Z"
+        "latitude": -3.0048255,
+        "longitude": 103.5775255,
+        "distance": "2.3 KM"
     }
 }
 ```
@@ -249,12 +253,20 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendor?vendorId=ciz
 
 - **Status Code:** `400 Bad Request`
     - Invalid input or missing fields
-    ```json
-    {
-        "error": true,
-        "message": "Parameter vendorId required"
-    }
-    ```
+        ```json
+        {
+            "error": true,
+            "message": "Parameter vendorId required"
+        }
+        ```
+
+    - Invalid or missing value user latitude and longitude for nearby filter
+        ```json
+        {
+            "error": true,
+            "message": "User coordinates not found. Please turn on your location"
+        }
+        ```
 
 - **Status Code:** `401 Unauthorized`
     - Missing access token
