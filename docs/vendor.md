@@ -235,10 +235,10 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendor?vendorId=ciz
     "dataVendor": {
         "vendorId": "ciz9KF75VR",
         "userId": "oy4wePSPdI",
-        "image_url": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+        "imageUrl": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
         "name": "Bu Sri",
         "nameVendor": "Bakso Sri",
-        "no_hp": "089817264555",
+        "noHp": "089817264555",
         "products": ["Bakso Urat", "Bakso Telor", "Bakso Mercon"],
         "minPrice": 12000,
         "maxPrice": 30000,
