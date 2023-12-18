@@ -61,10 +61,10 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?page=1&size
         {
             "vendorId": "BQX7Slyu8W",
             "userId": "sxSdOtPSeU",
-            "image_url": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+            "imageUrl": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
             "name": "Mang Dadang",
             "nameVendor": "Mie Ayam Dadang",
-            "no_hp": "089817264568",
+            "noHp": "089817264568",
             "products": ["Mie Ayam Pangsit", "Mie Ayam Bakso"],
             "minPrice": 10000,
             "maxPrice": 25000,
@@ -85,10 +85,10 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?page=1&size
         {
             "vendorId": "BQX7Slyu8W",
             "userId": "sxSdOtPSeU",
-            "image_url": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+            "imageUrl": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
             "name": "Mang Dadang",
             "nameVendor": "Mie Ayam Dadang",
-            "no_hp": "089817264568",
+            "noHp": "089817264568",
             "products": ["Mie Ayam Pangsit", "Mie Ayam Bakso"],
             "minPrice": 10000,
             "maxPrice": 25000,
@@ -203,10 +203,10 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors/maps" \
         {
             "vendorId": "BQX7Slyu8W",
             "userId": "sxSdOtPSeU",
-            "image_url": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+            "imageUrl": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
             "name": "Mang Dadang",
             "nameVendor": "Mie Ayam Dadang",
-            "no_hp": "089817264568",
+            "noHp": "089817264568",
             "products": ["Mie Ayam Pangsit", "Mie Ayam Bakso"],
             "minPrice": 10000,
             "maxPrice": 25000,
@@ -218,7 +218,6 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors/maps" \
     ],
 }
 ```
-
 
 ### Error Responses
 

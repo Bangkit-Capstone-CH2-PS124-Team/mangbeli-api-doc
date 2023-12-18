@@ -43,7 +43,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile" \
         "userId": "527s8rXvQy",
         "name": "John Doe",
         "email": "john@example.com",
-        "imageUrl": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+        "imageUrl": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
         "noHp": "081234567890",
         "role": "user",
         "latitude": -6.17521,
@@ -152,28 +152,28 @@ curl -X PATCH https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user/profile \
 
 - **Status Code:** `400 Bad Request`
     - If oldPassword filled, newPassword must also be filled
-    ```json
-    {
-        "error": true,
-        "message": "newPassword must also be provided"
-    }
-    ```
+        ```json
+        {
+            "error": true,
+            "message": "newPassword must also be provided"
+        }
+        ```
 
     - newPassword less than 8 characters
-    ```json
-    {
-        "error": true,
-        "message": "New Password must be at least 8 characters"
-    }
-    ```
+        ```json
+        {
+            "error": true,
+            "message": "New Password must be at least 8 characters"
+        }
+        ```
 
     - Password in database and oldPassword do not match
     ```json
-    {
-        "error": true,
-        "message": "Password and oldPassword do not match"
-    }
-    ```
+        {
+            "error": true,
+            "message": "Password and oldPassword do not match"
+        }
+        ```
 
     - Invalid role
         ```json
@@ -391,7 +391,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/user?userId=527s8rX
         "userId": "sxSdOtPSeU",
         "name": "Mang Dadang",
         "email": "dadang@mangbeli.com",
-        "imageUrl": "\nhttps://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
+        "imageUrl": "https://media.discordapp.net/attachments/880802395414736916/1180103125491789875/7c3613dba5171cb6027c67835dd3b9d4-r.png",
         "noHp": "089817264568",
         "role": "vendor",
         "latitude": -2.0048299,

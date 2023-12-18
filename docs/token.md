@@ -46,7 +46,7 @@ curl -X GET https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/token \
         ```json
         {
             "error": true,
-            "message": "Missing access token"
+            "message": "Missing refresh token"
         }
         ```
 
@@ -55,7 +55,7 @@ curl -X GET https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/token \
         ```json
         {
             "error": true,
-            "message": "Invalid access token"
+            "message": "Invalid refresh token"
         }
         ```
 
