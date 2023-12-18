@@ -124,14 +124,13 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?page=1&size
         }
         ```
 
-    - Invalid or missing value latitude and longitude for nearby filter
+    - Invalid or missing value user latitude and longitude for nearby filter
         ```json
         {
             "error": true,
             "message": "User coordinates not found. Please turn on your location"
         }
         ```
-    
 
 - **Status Code:** `401 Unauthorized`
     - Missing access token
@@ -199,7 +198,7 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors/maps" \
 ```json
 {
     "error": false,
-    "message": "Vendors fetched successfully",
+    "message": "Maps vendors fetched successfully",
     "listVendors": [
         {
             "vendorId": "BQX7Slyu8W",
@@ -219,5 +218,45 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors/maps" \
     ],
 }
 ```
+
+
+### Error Responses
+
+- **Status Code:** `400 Bad Request`
+    - Invalid or missing value user latitude and longitude
+        ```json
+        {
+            "error": true,
+            "message": "User coordinates not found. Please turn on your location"
+        }
+        ```
+
+- **Status Code:** `401 Unauthorized`
+    - Missing access token
+        ```json
+        {
+            "error": true,
+            "message": "Missing access token"
+        }
+        ```
+
+- **Status Code:** `403 Forbidden`
+    - Invalid access token
+        ```json
+        {
+            "error": true,
+            "message": "Invalid access token"
+        }
+        ```
+
+- **Status Code:** `500 Internal Server Error`
+    - Internal server error
+        ```json
+        {
+            "error": true,
+            "message": "Internal Server Error",
+            "errorMessage": "Details about the internal server error"
+        }
+        ```
 
 !> Any other HTTP method will result in a **405 Method Not Allowed** response.
