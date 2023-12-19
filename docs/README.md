@@ -28,6 +28,7 @@
 >     | cors                  | 2.8.5     |
 >     | dotenv                | 16.3.1    |
 >     | express               | 4.18.2    |
+>     | firebase-admin        | 12.0.0    |
 >     | jsonwebtoken          | 9.0.2     |
 >     | multer                | 1.4.5     |
 >     | mysql2                | 3.6.5     |
@@ -58,6 +59,7 @@ The table structure is as follows:
 | latitude       | double                | YES  |     | NULL    |       |
 | longitude      | double                | YES  |     | NULL    |       |
 | favorite       | longtext              | YES  |     | NULL    |       |
+| fcm            | text                  | YES  |     | NULL    |       |
 | createdAt      | datetime              | NO   |     | NULL    |       |
 | updatedAt      | datetime              | NO   |     | NULL    |       |
 
@@ -105,6 +107,8 @@ The table structure is as follows:
 - **[Location](/location)**
 
 - **[Token](/token)**
+
+- **[Notification](/notif)**
 
 - **[Logout](/logout)**
 

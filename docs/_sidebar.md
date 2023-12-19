@@ -9,4 +9,5 @@
     - [Tracks](/tracks)
     - [Location](/location)
     - [Token](/token)
+    - [Notification](/notif)
     - [Logout](/logout)
