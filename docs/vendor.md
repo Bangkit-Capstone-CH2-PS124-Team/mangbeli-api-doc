@@ -133,7 +133,7 @@ curl -X PATCH "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/update-profile" \
     "products": ["Mie Ayam Pangsit", "Mie Ayam Bakso", "Mie Yamin"],
     "minPrice": 11000,
     "maxPrice": 27000
-    }'
+}'
 ```
 
 ## Response

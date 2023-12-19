@@ -1,4 +1,7 @@
-# **API Documentation - Get Vendors**
+# **API Documentation - Vendors Information**
+
+---
+## **Get Vendors**
 
 ## URL
 
@@ -161,7 +164,8 @@ curl -X GET "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/vendors?page=1&size
         ```
 
 
-# **API Documentation - Get Vendors Maps**
+---
+## **Get Vendors Maps**
 
 ## URL
 
