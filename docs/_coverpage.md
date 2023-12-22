@@ -4,5 +4,5 @@
 
 > Predict and tracking street vendors
 
-[GitHub](https://github.com/Bangkit-Capstone-CH2-PS124-Team/mangbeli-auth)
+[GitHub](https://github.com/Bangkit-Capstone-CH2-PS124-Team/mangbeli-api)
 [Get Started](#api-documentation-mang-beli)
