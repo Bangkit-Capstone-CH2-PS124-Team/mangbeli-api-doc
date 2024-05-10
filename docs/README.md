@@ -1,4 +1,4 @@
-# **API Documentation Mang Beli**
+# **API Documentation MangBeli**
 
 <p align="center">
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
@@ -13,7 +13,7 @@
 
 ## Overview
 
-> This API serves the Authentication and Authorization functionality for the Mang Beli application.
+> This API serves the Authentication and Authorization functionality for the MangBeli application.
 
 ### Technology
 
