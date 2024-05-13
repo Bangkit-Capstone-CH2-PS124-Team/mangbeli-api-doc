@@ -107,6 +107,12 @@ curl -X POST "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/fcm" \
 
 ## Request
 
+### Headers
+
+| Key            | Value                                | Required | Description                                |
+| -------------- | ------------------------------------ | -------- | ------------------------------------------ |
+| `Authorization`| Bearer `<accessToken>`               | Yes      | Authentication token for user authorization|
+
 ### Body
 
 | Key      | Type    | Required | Description                            |
@@ -118,6 +124,7 @@ curl -X POST "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/fcm" \
 #### Example
 ```bash
 curl -X POST "https://mangbeli-auth-1-vb76nyymeq-et.a.run.app/notif" \
+-H "Authorization: Bearer <accessToken>" \
 -H "Content-Type: application/json" \
 -d '{
     "to": "sxSdOtPSeU",
